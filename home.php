@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <div id="wrap">
-
+<i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>
 	<?php if(is_mobile()): ?>
         <?php if(get_field('banner_sp')) : ?>
             <section class="top-banner">
@@ -185,61 +185,6 @@
             </div>
         </section>
 
-        <!--footer-->
-        <footer class="footer">
-        	<?php if(get_field('copyright')) : ?>
-				<div class="copy-right"><?php the_field('copyright'); ?></div>
-			<?php endif; ?>
-        </footer>
-        <!--footer-end-->
+</div>
 
-        
-    </div>
-
-
-
-
-<?php if ( is_mobile() ) : ?>
-	<?php if(get_field('footer_banner_mobile')) : ?>
-		<div class="footer_m pc-none">
-		    <a href="/mailform/" target="_blank">
-		        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/picture/footer_m.png" alt="Gửi câu hỏi tới hệ thống">
-		    </a>
-		</div>
-	<?php endif; ?>
-
-<?php else: ?>
-
-	<a href="#" class="backtotop">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/backtotop.png" alt="back top">
-    </a>
-
-<?php endif; ?>
-
-<?php if ( is_mobile() ) : ?>
-	<div id="sp_slide">
-	  <div class="slidemenu slidemenu-right">
-	    <div class="slidemenu-body">
-	      <div class="slidemenu-content">
-	        <?php wp_nav_menu( array(
-				'theme_location' => 'top'
-			) ); ?>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="pos">
-			<span class="button menu-button-right">MAIN<br>MENU</span>
-		</div>
-	</div>
-
-	<script>
-	    var menu_right = SpSlidemenu({
-	      main : '#wrap',
-	      button: '.menu-button-right',
-	      slidemenu : '.slidemenu-right',
-	      direction: 'right'
-	    });
-	</script>
-<?php endif; ?>
-
-<?php get_footer();
+<?php get_footer(); ?>

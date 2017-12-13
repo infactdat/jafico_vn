@@ -128,3 +128,10 @@
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
+            <?php if(!is_front_page()): ?>
+                <div id="breadcrumb">
+                    <div class="container">
+                        <?php custom_breadcrumbs(); ?>
+                    </div>
+                </div><!--/breadcrumb-->
+            <?php endif; ?>
