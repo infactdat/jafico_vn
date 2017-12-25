@@ -97,17 +97,26 @@ body .footer {
   outline: 0;
   background-color: #f7f7f7;
   border: 1px solid #d2d2d2;
-  padding: 13px 10px 13px 35px;
+  padding: 13px 30px 13px 35px;
   font-size: 1em;
   background-repeat: no-repeat;
   background-position: 10px center;
   color: #9e9e9e;
   display: block;
+  position: relative;
 }
 @media (min-width: 641px) {
   .job-search-header ul li .select2-selection--single {
     letter-spacing: 1px;
   }
+}
+.job-search-header ul li .select2-selection__arrow {
+  background: url('../../assets/images/icon/arrow_02.png') center center no-repeat;
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .job-search-header ul li input {
   width: 100%;
@@ -307,8 +316,14 @@ body .footer {
 .job-search-content .job-detail .job-detail-header h2 {
   font-size: 1.33333333em;
   padding: 0 10px;
-  float: left;
   line-height: 1.3;
+  float: left;
+}
+@media (max-width: 640px) {
+  .job-search-content .job-detail .job-detail-header .status ~ h2 {
+    margin-left: 60px;
+    float: none;
+  }
 }
 .job-search-content .job-detail .job-detail-header .job-number {
   float: right;

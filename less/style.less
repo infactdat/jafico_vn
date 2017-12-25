@@ -85,15 +85,25 @@ body {
 				outline: 0;
 				background-color: @background-base;
 				border: 1px solid @border-color-base;
-				padding: 13px 10px 13px 35px;
+				padding: 13px 30px 13px 35px;
 				font-size: 15/15em;
 				background-repeat: no-repeat;
     			background-position: 10px center;
     			color: #9e9e9e;
     			display: block;
+    			position: relative;
     			@media (min-width: @screen-pc) {
     				letter-spacing: 1px;
     			}
+			}
+			.select2-selection__arrow {
+				background: url('../../assets/images/icon/arrow_02.png') center center no-repeat;
+				width: 30px;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+
 			}
 			input {
 				width: 100%;
@@ -271,8 +281,14 @@ body {
 			h2 {
 				font-size: 20/15em;
 				padding: 0 10px;
-				float: left;
 				line-height: 1.3;
+				float: left;
+			}
+			.status ~ h2 {
+				@media (max-width: @screen-sp) {
+					margin-left: 60px;
+					float: none;
+				}
 			}
 			.job-number {
 				float: right;
