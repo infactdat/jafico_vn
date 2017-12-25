@@ -14,6 +14,8 @@
  */
 
 function add_enqueue () {
+	// wp_register_script('gmapapi', 'https://maps.google.com/maps/api/js?key=AIzaSyAG0vXC-H8BbXePH5tGtSIQwo-lWK0IN4I', array(), false, false );
+ //    wp_register_script('gmaps', 'https://hpneo.github.io/gmaps/gmaps.js?key=AIzaSyAG0vXC-H8BbXePH5tGtSIQwo-lWK0IN4I', array(), false, false );
     wp_enqueue_script('breakpoints_js', get_stylesheet_directory_uri() . '/js/breakpoints.js', array('jquery'));
     wp_enqueue_script('img_change_js', get_stylesheet_directory_uri() . '/js/img_change.js', array('jquery'));
     wp_enqueue_script('rollover_js', get_stylesheet_directory_uri() . '/js/rollover.js', array('jquery'));
@@ -22,6 +24,7 @@ function add_enqueue () {
     wp_enqueue_script('sp_slidemenu_js', get_stylesheet_directory_uri() . '/js/sp_slidemenu.js', array('jquery'));
     wp_enqueue_style( 'fa-css', get_template_directory_uri() . '/assets/css/fontawesome.min.css', false, '1.0', 'all' );
     wp_enqueue_style( 'jafico-css', get_template_directory_uri() . '/assets/css/jafico.css', false, '1.0', 'all' );
+    wp_enqueue_style( 'select2-css', get_template_directory_uri() . '/assets/css/select2.css', false, '1.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'add_enqueue' );
 
@@ -637,7 +640,7 @@ function custom_breadcrumbs() {
             $post_type = get_post_type();
               
             // If it is a custom post type display name and link
-            if($post_type != 'post' && $post_type != 'candidate' ) {
+            if($post_type != 'post' && $post_type != 'job' ) {
                   
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
@@ -645,10 +648,10 @@ function custom_breadcrumbs() {
                 echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
                 
             }
-            if($post_type == 'candidate') {
+            if($post_type == 'job') {
             	$post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . home_url() . '/search-page" title="' . $post_type_object->labels->name . '">候補者検索</a></li>';
+                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . home_url() . '/search-job" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
             }
             // Get post category info
             $category = get_the_category();
