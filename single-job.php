@@ -37,12 +37,12 @@
 
 			        <div class="job-info">
 			            <h2>Jobs （仕事の詳細）</h2>
-			            <div class="txt-border"><?php echo get_post_meta(get_the_ID(), 'job_information', true ) ?></div>
+			            <div class="txt-border"><?php echo wpautop( get_post_meta(get_the_ID(), 'job_information', true ), $br = 1 ); ?></div>
 			        </div>
 
 			        <div class="job-company-info">
 			            <h2>Company info （会社概要）</h2>
-			            <div class="txt-border"><?php echo get_post_meta(get_the_ID(), 'job_company', true ) ?></div>
+			            <div class="txt-border"><?php echo wpautop( get_post_meta(get_the_ID(), 'job_company', true ), $br = 1 ); ?></div>
 			        </div>
 
 			        <div class="job-message">
@@ -57,7 +57,7 @@
 								
 								?>
 							</div>
-			            	<p><?php echo get_post_meta(get_the_ID(), 'job_employer_message', true ) ?></p>
+			            	<p><?php echo wpautop( get_post_meta(get_the_ID(), 'job_employer_message', true ), $br = 1 ); ?></p>
 			            </div>
 			        </div>
 			    </div>
