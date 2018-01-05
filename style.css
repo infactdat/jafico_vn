@@ -938,12 +938,6 @@ header.header {
   .section-10 ul>li:nth-child(2) img, .section-10 ul>li:nth-child(4) img{
     margin: 10px 0;
   }
-  .footer_m {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
   #wrap {
     padding-bottom: 110px;
   }
@@ -1157,26 +1151,26 @@ figcaption{
   #sp_slide .slidemenu {
     background-color: #252525;
   }
-  #sp_slide .slidemenu .sp-nav li {
+  #sp_slide .slidemenu .menu li {
     list-style: none;
     border-top: 1px solid #4D4D4D;
     border-bottom: 1px solid #000;
     font-size: 14px;
     line-height: 1.8;
   }
-  #sp_slide .slidemenu .sp-nav li a {
+  #sp_slide .slidemenu .menu li a {
     padding:10px 0 10px 20px;
     display: block;
     text-decoration: none;
     color: #fff;
   }
-  #sp_slide .slidemenu .sp-nav li a br {
+  #sp_slide .slidemenu .menu li a br {
     display: none;
   }
-  #sp_slide .slidemenu .sp-nav li:first-child {
+  #sp_slide .slidemenu .menu li:first-child {
     border-top: none;
   }
-  #sp_slide .slidemenu .sp-nav li:last-child {
+  #sp_slide .slidemenu .menu li:last-child {
     border-bottom: none;
   }
   #sp_slide .slidemenu .slidemenu-header {

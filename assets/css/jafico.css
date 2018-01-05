@@ -585,5 +585,21 @@ body .footer {
 .single-job-wrap .job-detail-btn {
   text-align: center;
 }
+.footer_m {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -1px 4px #b7b7b7;
+  -moz-box-shadow: 0 -1px 4px #b7b7b7;
+  -webkit-box-shadow: 0 -1px 4px #b7b7b7;
+  -ms-box-shadow: 0 -1px 4px #b7b7b7;
+  -o-box-shadow: 0 -1px 4px #b7b7b7;
+}
+.footer_m a {
+  display: block;
+  float: left;
+  width: 50%;
+}
 
 /*# sourceMappingURL=jafico.css.map */

@@ -1,6 +1,8 @@
 <?php 
 $copyright = ot_get_option('copyright');
 $job_banner = ot_get_option('job_banner');
+$form_banner_mobile = ot_get_option('form_banner_mobile');
+$job_banner_mobile = ot_get_option('job_banner_mobile');
 ?>
 					<!--footer-->
 			        <footer class="footer">
@@ -12,14 +14,14 @@ $job_banner = ot_get_option('job_banner');
 
 
 			<?php if ( is_mobile() ) : ?>
-				<?php if(get_field('footer_banner_mobile')) : ?>
-					<div class="footer_m pc-none">
-					    <a href="/mailform/" target="_blank">
-					        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/picture/footer_m.png" alt="Gửi câu hỏi tới hệ thống">
-					    </a>
-					</div>
-				<?php endif; ?>
-
+				<div class="footer_m pc-none">
+				    <a href="<?php echo get_home_url()?>/mailform/" target="_blank">
+				        <img src="<?php echo $form_banner_mobile; ?>" />
+				    </a>
+				    <a href="<?php echo get_home_url()?>/search-job/" target="_blank">
+			    		<img src="<?php echo $job_banner_mobile; ?>" />
+			    	</a>
+				</div>
 			<?php else: ?>
 
 				<a href="#" class="backtotop">
