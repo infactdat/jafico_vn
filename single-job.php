@@ -62,7 +62,7 @@
 			        </div>
 			    </div>
 			    <div class="job-detail-btn">
-			    	<a class="single-job-btn" href="<?php echo get_home_url();?>/search-job">Other JOB<i class="fa fa-angle-right"></i></a>
+			    	<a class="single-job-btn" href="<?php echo $_SERVER['HTTP_REFERER'];?>">Other JOB<i class="fa fa-angle-right"></i></a>
 			    </div>
 			</div>
 		</article><!-- #post-## -->
