@@ -270,6 +270,7 @@ body .footer {
   color: #d34141;
   font-size: 1.625em;
   line-height: 0.8;
+  margin: 0 4px;
 }
 @media (max-width: 640px) {
   .job-search-content .result-bar .total-jobs {
@@ -312,6 +313,9 @@ body .footer {
   padding: 4px 10px;
   background: #d34141;
   color: #fff;
+}
+.job-search-content .job-detail .job-detail-header .status.closed {
+  background: #b6b6b6;
 }
 .job-search-content .job-detail .job-detail-header h2 {
   font-size: 1.33333333em;
@@ -584,6 +588,27 @@ body .footer {
 }
 .single-job-wrap .job-detail-btn {
   text-align: center;
+}
+.search-result-suggestion {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eee2c1;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.search-result-suggestion h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.7em;
+}
+.search-result-suggestion a {
+  display: block;
+  margin: 5px 0;
+  color: #d34141;
+  text-decoration: underline;
 }
 .footer_m {
   position: fixed;

@@ -247,6 +247,7 @@ body {
 				color: @brand-primary;
 				font-size: 26/16em;
 				line-height: 0.8;
+				margin: 0 4px;
 			}
 			@media (max-width: @screen-sp) {
 			    float: none;
@@ -277,6 +278,9 @@ body {
 				padding: 4px 10px;
 				background: @brand-primary;
 				color: #fff;
+				&.closed {
+					background: #b6b6b6;
+				}
 			}
 			h2 {
 				font-size: 20/15em;
@@ -512,14 +516,30 @@ body {
 		text-align: center;
 	}
 }
-
+.search-result-suggestion {
+	margin-top: 30px;
+	padding: 20px;
+    background: #fff;
+    border: 1px solid @border-color-second;
+    .border-radius(5px);
+	h3 {
+		font-size: 1.2em;
+		margin-bottom: 0.7em;
+	}
+	a {
+		display: block;
+		margin: 5px 0;
+		color: @brand-primary;
+		text-decoration: underline;
+	}
+}
 .footer_m {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     .box-shadow(0 -1px 4px #b7b7b7);
-    a{
+    a {
     	display: block;
     	float: left;
     	width: 50%;

@@ -28,9 +28,11 @@
 			        			</tbody>
 			        		</table>
 			        	</div>
-			        	<div class="btn">
-			        		<a class="single-job-btn" href="<?php echo get_home_url();?>/mailform">Apply now<i class="fa fa-angle-right"></i></a>
-			        	</div>
+			        	<?php if(get_post_meta(get_the_ID() , 'job_closed', true  ) != '1'):?>
+				        	<div class="btn">
+				        		<a class="single-job-btn" href="<?php echo get_home_url();?>/mailform?job_name=<?php the_title();?>&job_url=<?php the_permalink(); ?>">Apply now<i class="fa fa-angle-right"></i></a>
+				        	</div>
+				        <?php endif;?>
 			        </div>
 			    </div>
 			    <div class="job-detail-body">

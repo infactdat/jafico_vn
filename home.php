@@ -3,7 +3,6 @@
 <?php get_header(); ?>
 
 <div id="wrap">
-<i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>
 	<?php if(is_mobile()): ?>
         <?php if(get_field('banner_sp')) : ?>
             <section class="top-banner">
