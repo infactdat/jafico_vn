@@ -150,7 +150,58 @@
             </div>
         </section>
 
+        
+        <section class="section-11" id="link8">
+            <h2 class="sec-title"><span><?php the_field('sec11_sub_title'); ?></span><?php the_field('sec11_title'); ?></h2>
+            <div class="container">
+                <?php if( have_rows('sec11_repeater') ): ?>
+                    <?php while( have_rows('sec11_repeater') ): the_row(); 
+                    $image = get_sub_field('image');
+                    $text = get_sub_field('text');
+                    ?>
+                    <div class="media clearfix">
+                        <?php if($image): ?>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                        <?php endif; ?>
+                        <?php if($text): ?>
+                            <div class="fl_r">
+                                <?php echo $text; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
 
+
+                <?php if( have_rows('sec11_repeater_2') ): ?>
+                    <div class="media-2col clearfix">
+                        <?php while( have_rows('sec11_repeater_2') ): the_row(); 
+                        $logo = get_sub_field('logo');
+                        $title = get_sub_field('title');
+                        $text = get_sub_field('text');
+                        ?>
+                        <div class="media">
+                            <div class="img">
+                                <?php if($logo): ?>
+                                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="content">
+                                <?php if($title): ?>
+                                    <h3><?php echo $title; ?></h3>
+                                <?php endif; ?>
+                                <?php if($text): ?>
+                                    <?php echo $text; ?>
+                                <?php endif; ?>
+                            </div>
+                            
+                        </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </section>
+        
         <section class="section-8" id="link5">
             <h2 class="sec-title"><span><?php the_field('sec8_sub_title'); ?></span><?php the_field('sec8_title'); ?></h2>
             <div class="container">
@@ -175,6 +226,8 @@
                 </div>
             </div>
         </section>
+
+        
 
 
         <section class="section-9" id="link6">

@@ -15,12 +15,16 @@ $job_banner_mobile = ot_get_option('job_banner_mobile');
 
 			<?php if ( is_mobile() ) : ?>
 				<div class="footer_m pc-none">
-				    <a href="<?php echo get_home_url()?>/mailform/" target="_blank">
-				        <img src="<?php echo $form_banner_mobile; ?>" />
-				    </a>
-				    <a href="<?php echo get_home_url()?>/search-job/" target="_blank">
-			    		<img src="<?php echo $job_banner_mobile; ?>" />
-			    	</a>
+					<?php if($form_banner_mobile): ?>
+					    <a href="<?php echo get_home_url()?>/mailform/" target="_blank">
+					        <img src="<?php echo $form_banner_mobile; ?>" />
+					    </a>
+					<?php endif; ?>
+				    <?php if($job_banner_mobile): ?>
+					    <a href="<?php echo get_home_url()?>/search-job/" target="_blank">
+				    		<img src="<?php echo $job_banner_mobile; ?>" />
+				    	</a>
+				    <?php endif; ?>
 				</div>
 			<?php else: ?>
 
@@ -28,9 +32,11 @@ $job_banner_mobile = ot_get_option('job_banner_mobile');
 			        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/backtotop.png" alt="back top">
 			    </a>
 			    <?php if(is_front_page()): ?>
-			    	<a class="job-banner" href="<?php echo get_home_url()?>/search-job/">
-			    		<img src="<?php echo $job_banner; ?>" />
-			    	</a>
+					<?php if($job_banner): ?>
+				    	<a class="job-banner" href="<?php echo get_home_url()?>/search-job/">
+				    		<img src="<?php echo $job_banner; ?>" />
+				    	</a>
+			    	<?php endif; ?>
 			    <?php endif; ?>
 			<?php endif; ?>
 

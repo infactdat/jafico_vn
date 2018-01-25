@@ -656,6 +656,105 @@ header.header {
 
 
 
+/*section-11*/
+
+
+.section-11{
+  background: url("./assets/images/background/pattern_2.jpg") 0 5px repeat;
+  padding: 55px 0;
+}
+.section-11 a{
+  color: #3b87ce;
+  word-break: break-all;
+}
+.section-11 a:hover{
+  text-decoration: underline;
+  color: #72aadf;
+}
+.section-11 .media {
+  margin-bottom: 25px;
+}
+.section-11 .media .fl_r{
+  float: right;
+  width: 730px;
+}
+.section-11 .media h3{
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.section-11 .media span{
+  color: #5b5b5b;
+  font-size: 90%;
+}
+.section-11 .media span.small{
+  font-size: 85%;
+}
+.section-11 .media .kizi{
+  background: #fff;
+  border: 1px solid #999;
+  margin-top: 24px;
+}
+.section-11 .media .kizi img{
+  float: left;
+  margin-right: 16px;
+  vertical-align: bottom;
+}
+.section-11 .media .kizi p a{
+  font-size: 90%;
+}
+@media (min-width: 641px) {
+  .media-2col {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  .media-2col .media:nth-child(2n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+}
+
+.media-2col .media {
+  float: left;
+  width: 49%;
+  margin-left: 2%;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 10px;
+}
+
+.media-2col .media .img {
+  float: left;
+  max-width: 164px;
+  position: relative;
+}
+.media-2col .media .content {
+  margin-left: 170px;
+}
+@media (max-width: 640px) {
+  .media-2col .media h3 {
+    font-size: 125%;
+    text-align: left;
+  }
+  .media-2col .media {
+    margin-left: 0;
+    width: 100%;
+    float: none;
+  }
+  .media-2col .media .img {
+    max-width: 130px;
+  }
+  .media-2col .media .content {
+    margin-left: 135px;
+  }
+}
+
 
 
 
